@@ -27,6 +27,27 @@ const UserSchema = new Schema(
       enum: Object.values(ROLES),
       default: ROLES.USER,
     },
+    emailVerified: {
+      type: Boolean,
+      default: false,
+    },
+    address: {
+      country: {
+        type: String,
+      },
+      street: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      state: {
+        type: String,
+      },
+      zip: {
+        type: String,
+      },
+    },
   },
   {
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },

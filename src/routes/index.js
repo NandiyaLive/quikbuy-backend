@@ -1,5 +1,8 @@
+import { authenticate } from "@/middlewares/auth";
 import express from "express";
 import authRoutes from "./auth";
+import categoryRoutes from "./category";
+import userRoutes from "./user";
 
 const router = express.Router();
 
@@ -15,5 +18,7 @@ router.get("/", (req, res) => {
 });
 
 router.use("/auth", authRoutes);
+router.use("/user", authenticate, userRoutes);
+router.use("/category", authenticate, categoryRoutes);
 
 export default router;

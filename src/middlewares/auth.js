@@ -1,4 +1,4 @@
-import { JWT_SECRET } from "@/config";
+import { JWT_SECRET } from "@/utils/config";
 import User from "@/models/user";
 import jwt from "jsonwebtoken";
 
